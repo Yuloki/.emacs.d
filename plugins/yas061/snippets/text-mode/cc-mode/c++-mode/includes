@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: basicincludes
+# key: includes
+# --
+
+/*
+** `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` for $1
+** Author : strzel_a - Strzelewicz Alexandre
+** Created : `(nth 5 (decode-time))`
+** Cmt : $2
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+$3

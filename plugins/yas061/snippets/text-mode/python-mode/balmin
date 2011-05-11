@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: classfull
+# key: balmin
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+###################################################
+#
+# $1
+#
+###################################################$2

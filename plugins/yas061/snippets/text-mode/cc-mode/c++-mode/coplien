@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: classfull
+# key: coplien
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+class ${1:id}{
+private:
+public:
+  $1();
+  $1(const $1 &cop){};
+  ~$1();
+  $1 &operator=(const $1 &c){};
+protected:
+};
+
+//------ implementation
+
+$1::$1(){}
+
+$1::~$1(){}
+$2

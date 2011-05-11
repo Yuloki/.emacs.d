@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: coutcolor
+# key: coutc
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+std::cout << "\033[32;1mDebug : $1\033[0m" << std::endl;$2

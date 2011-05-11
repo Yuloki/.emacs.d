@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: classfull
+# key: newmet
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+${1:ret-type} ${2:class-name}::${3:method}(${4:params}){
+  $6	      
+}

@@ -1,0 +1,11 @@
+#name : class ... { ... }
+# --
+
+/*
+**  `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` for $1
+**
+**  Author : strzel_a (Strzelewicz Alexandre)
+**  Cmt : $2
+**  Created : `(nth 5 (decode-time))`
+**
+*/

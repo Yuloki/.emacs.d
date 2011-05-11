@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: classfull
+# key: balmax
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+###################################################
+#
+#            $1
+#
+# On `(current-time-string)`
+#
+###################################################
+$2

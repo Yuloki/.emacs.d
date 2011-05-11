@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: classfull
+# key: thasdasd
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+this->$1

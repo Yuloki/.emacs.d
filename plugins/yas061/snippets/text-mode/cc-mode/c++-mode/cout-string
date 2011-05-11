@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: coutepitech
+# key: coutv
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+std::cout << $1 << std::endl;$2
