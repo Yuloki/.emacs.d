@@ -1,63 +1,10 @@
+;;
+;; Configured by Strzelewicz Alexandre 
+;; https://github.com/Alexandre-Strzelewicz/.emacs.d
+;;
 
-;;
-;; COLOR PARENTHESIS
-;;
-(load-library "paren")
-(show-paren-mode 1)
-;;
-;; DISABLE BACKUP FILES
-;;
-(setq make-backup-files nil)
-(setq delete-auto-save-files t)
-(global-font-lock-mode t)
-(setq-default indicate-empty-lines t)
-(transient-mark-mode t)
-(column-number-mode t)
-;;
-;; COLORS
-;;
-(set-cursor-color "Red")
-(set-face-background 'region "Red")
-(set-face-background 'show-paren-match-face "Blue")
-(set-face-background 'show-paren-mismatch-face "Magenta")
-(set-face-foreground 'show-paren-mismatch-face "Red")
-(set-face-foreground 'highlight "yellow")
-;;
-;; MISC
-;;
-(setq inhibit-startup-message t)
-(setq frame-title-format "%S: %f")
-(modify-frame-parameters nil '((wait-for-wm . nil)))
-(fset 'yes-or-no-p 'y-or-n-p)
-(icomplete-mode 1)
-(setq column-number-mode t)
-(setq display-time-string-forms '((format "[%s:%s]-[%s/%s/%s] " 24-hours minutes day month year)))
-(setq scroll-preserve-screen-position t)
-(add-hook 'save-buffer-hook 'delete-trailing-whitespace)
-;; 
-;; SHORTCUTS
-;;
-(global-set-key (kbd "C-c g") 'goto-line)
-(global-set-key (kbd "C-c c") 'comment-region)
-(global-set-key (kbd "C-c v") 'uncomment-region)
-;;
-;; Fly between window
-;;
-(windmove-default-keybindings 'meta)
-;;
-;; Resize window
-;;
-(global-set-key (kbd "<f5>") 'shrink-window-horizontally)
-(global-set-key (kbd "<f6>") 'enlarge-window-horizontally)
-(global-set-key (kbd "<f7>") 'shrink-window)
-(global-set-key (kbd "<f8>") 'enlarge-window)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                  Plugins
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/plugins")
 ;;
 ;; IDO
 ;;
@@ -126,40 +73,65 @@
 ;;
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/markdown-mode"))
 (require 'markdown-mode)
-
-;;(require 'highlight-current-line)
-;;(highlight-current-line-on t)
-;;(set-face-background 'highlight-current-line-face "light yellow")
-;;(global-hl-line-mode 1)
-;; To customize the background color
-;;(set-face-background 'hl-line "blue")  ;; Emacs 22 Only
-
-
-
-;;; Electric Pairs
-;;  (add-hook 'python-mode-hook
-;;      (lambda ()
-;;       (define-key python-mode-map "\"" 'electric-pair)
-;;       (define-key python-mode-map "\'" 'electric-pair)
-;;       (define-key python-mode-map "(" 'electric-pair)
-;;       (define-key python-mode-map "[" 'electric-pair)
-;;       (define-key python-mode-map "{" 'electric-pair)))
-;; (defun electric-pair ()
-;;   "Insert character pair without sournding spaces"
-;;   (interactive)
-;;   (let (parens-require-spaces)
-;;     (insert-pair)))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+;;
+;; Coffeescript
+;;
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/coffee-mode"))
+(require 'coffee-mode)
 
 
+;;
+;; COLOR PARENTHESIS
+;;
+(load-library "paren")
+(show-paren-mode 1)
+;;
+;; DISABLE BACKUP FILES
+;;
+(setq make-backup-files nil)
+(setq delete-auto-save-files t)
+(global-font-lock-mode t)
+(setq-default indicate-empty-lines t)
+(transient-mark-mode t)
+(column-number-mode t)
+;;
+;; COLORS
+;;
+(set-cursor-color "Red")
+(set-face-background 'region "Red")
+(set-face-background 'show-paren-match-face "Blue")
+(set-face-background 'show-paren-mismatch-face "Magenta")
+(set-face-foreground 'show-paren-mismatch-face "Red")
+(set-face-foreground 'highlight "yellow")
+;;
+;; MISC
+;;
+(setq inhibit-startup-message t)
+(setq frame-title-format "%S: %f")
+(modify-frame-parameters nil '((wait-for-wm . nil)))
+(fset 'yes-or-no-p 'y-or-n-p)
+(icomplete-mode 1)
+(setq column-number-mode t)
+(setq display-time-string-forms '((format "[%s:%s]-[%s/%s/%s] " 24-hours minutes day month year)))
+(setq scroll-preserve-screen-position t)
+(add-hook 'save-buffer-hook 'delete-trailing-whitespace)
+;; 
+;; SHORTCUTS
+;;
+(global-set-key (kbd "C-c g") 'goto-line)
+(global-set-key (kbd "C-c c") 'comment-region)
+(global-set-key (kbd "C-c v") 'uncomment-region)
+;;
+;; Fly between window
+;;
+(windmove-default-keybindings 'meta)
+;;
+;; Resize window
+;;
+(global-set-key (kbd "<f5>") 'shrink-window-horizontally)
+(global-set-key (kbd "<f6>") 'enlarge-window-horizontally)
+(global-set-key (kbd "<f7>") 'shrink-window)
+(global-set-key (kbd "<f8>") 'enlarge-window)
 
-;;(require 'python)
-;;(require 'auto-complete)
-;;(require 'yasnippet)
-
-
-;;(require 'yasnippet-bundle)
-;; (add-to-list 'load-path
-;;                   "~/.emacs.d/plugins/yas061")
-;;     (require 'yasnippet) ;; not yasnippet-bundle
-;;     (yas/initialize)
-;;     (yas/load-directory "~/.emacs.d/plugins/yas061/snippets")
