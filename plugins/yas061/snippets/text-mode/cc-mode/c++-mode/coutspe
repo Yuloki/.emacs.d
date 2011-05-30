@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: coutepitech
-# key: coutdeb
-# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
-# --
-std::cout << "\033[32;1m Result :\033[0m $1 " << std::endl; 
-std::cout << $2 << std::endl;$3
